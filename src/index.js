@@ -24,3 +24,5 @@ root.render(
   <Footer />
   </BrowserRouter>
 );
+
+//init
