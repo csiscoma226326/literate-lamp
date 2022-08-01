@@ -1,10 +1,10 @@
-import './index.css';
-import Homepage from './pages/Homepage';
+import "./index.css";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <>
-      <Homepage />
+      <Dashboard />
     </>
   );
 }
