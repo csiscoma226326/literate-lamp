@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -18,40 +18,40 @@ export default function Example() {
                 <div className="flex items-center flex-shrink-0">
                   <img
                     className="block w-auto h-8 lg:hidden"
-                    src="http://assets.stickpng.com/images/587e31f49686194a55adab6e.png"
-                    alt="ReactApp"
+                    ssrc="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                    alt="MyReactApp"
                   />
                   <img
                     className="hidden w-auto h-8 lg:block"
-                    src="http://assets.stickpng.com/images/587e31f49686194a55adab6e.png"
-                    alt="ReactApp"
+                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                    alt="MyReactApp"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
-                  >
-                    <Link to="/">Dashboard</Link>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
-                  >
-                    <Link to="/Team">Team</Link>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
-                  >
-                    <Link to="/Projects">Projects</Link>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700"
-                  >
-                    <Link to="/Calendar">Calendar</Link>
-                  </a>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                  isActive ? 'inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-indigo-500 text-gray-900' : 'inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700'}>
+                  Dashboard
+                </NavLink>
+                <NavLink
+                  to="/Team"
+                  className={({ isActive }) =>
+                  isActive ? 'inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-indigo-500 text-gray-900' : 'inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700'}>
+                  Team
+                </NavLink>
+                <NavLink
+                  to="/Projects"
+                  className={({ isActive }) =>
+                  isActive ? 'inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-indigo-500 text-gray-900' : 'inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700'}>
+                  Projects
+                </NavLink>
+                <NavLink
+                  to="/Calendar"
+                  className={({ isActive }) =>
+                  isActive ? 'inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-indigo-500 text-gray-900' : 'inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700'}>
+                  Calendar
+                </NavLink>
                 </div>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
@@ -69,8 +69,8 @@ export default function Example() {
                     <Menu.Button className="flex text-sm bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        className="object-cover w-8 h-8 rounded-full"
+                        src="./assets/csiscoma.jpeg"
                         alt=""
                       />
                     </Menu.Button>

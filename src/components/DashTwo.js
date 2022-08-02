@@ -3,11 +3,11 @@ import { UsersIcon } from '@heroicons/react/outline'
 export default function Example() {
   return (
     <div className="relative bg-white">
-      <div className="h-56 bg-indigo-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
+      <div className="h-56 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
         <img
-          className="object-cover w-full h-full"
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-          alt="Support team"
+          className="w-full h-full py-12"
+          src="./assets/pusheen_react.png"
+          alt=""
         />
       </div>
       <div className="relative px-4 py-8 mx-auto max-w-7xl sm:py-12 sm:px-6 lg:py-16">
