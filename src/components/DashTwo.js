@@ -5,7 +5,7 @@ export default function Example() {
     <div className="relative bg-white">
       <div className="h-56 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
         <img
-          className="w-full h-full py-12"
+          className="w-full h-full py-14"
           src="./assets/pusheen_react.png"
           alt=""
         />
