@@ -9,7 +9,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="sticky top-0 z-50 w-full bg-white shadow">
       {({ open }) => (
         <>
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -51,6 +51,12 @@ export default function Example() {
                   className={({ isActive }) =>
                   isActive ? 'inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-indigo-500 text-gray-900' : 'inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700'}>
                   Calendar
+                </NavLink>
+                <NavLink
+                  to="/Portfolio"
+                  className={({ isActive }) =>
+                  isActive ? 'inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 border-indigo-500 text-gray-900' : 'inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:border-gray-300 hover:text-gray-700'}>
+                  Portfolio
                 </NavLink>
                 </div>
               </div>

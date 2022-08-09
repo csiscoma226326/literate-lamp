@@ -1,61 +1,117 @@
-import { CheckIcon } from '@heroicons/react/outline'
+/* This example requires Tailwind CSS v2.0+ */
+import { Disclosure } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/outline'
 
-const features = [
+const faqs = [
   {
-    name: 'Invite team members',
-    description: 'Tempor tellus in aliquet eu et sit nulla tellus. Suspendisse est, molestie blandit quis ac. Lacus.',
+    question:
+      "question",
+    answer:
+      "answer",
   },
   {
-    name: 'Notifications',
-    description: 'Ornare donec rhoncus vitae nisl velit, neque, mauris dictum duis. Nibh urna non parturient.',
+    question:
+      "question",
+    answer:
+      "answer",
   },
   {
-    name: 'List view',
-    description: 'Etiam cras augue ornare pretium sit malesuada morbi orci, venenatis. Dictum lacus.',
+    question:
+      "question",
+    answer:
+      "answer",
   },
   {
-    name: 'Boards',
-    description: 'Interdum quam pulvinar turpis tortor, egestas quis diam amet, natoque. Mauris sagittis.',
+    question:
+      "question",
+    answer:
+      "answer",
   },
   {
-    name: 'Keyboard shortcuts',
-    description: 'Ullamcorper in ipsum ac feugiat. Senectus at aliquam vulputate mollis nec. In at risus odio.',
+    question:
+      "question",
+    answer:
+      "answer",
   },
   {
-    name: 'Reporting',
-    description: 'Magna a vel sagittis aliquam eu amet. Et lorem auctor quam nunc odio. Sed bibendum.',
+    question:
+      "question",
+    answer:
+      "answer",
   },
   {
-    name: 'Calendars',
-    description: 'Sed mi, dapibus turpis orci posuere integer. A porta viverra posuere adipiscing turpis.',
+    question:
+      "question",
+    answer:
+      "answer",
   },
   {
-    name: 'Mobile app',
-    description: 'Quisque sapien nunc nisl eros. Facilisis sagittis maecenas id dignissim tristique proin sed.',
+    question:
+      "question",
+    answer:
+      "answer",
+  },
+  {
+    question:
+      "question",
+    answer:
+      "answer",
+  },
+  {
+    question:
+      "question",
+    answer:
+      "answer",
+  },
+  {
+    question:
+      "question",
+    answer:
+      "answer",
+  },
+  {
+    question:
+      "question",
+    answer:
+      "answer",
   },
 ]
 
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 export default function Example() {
   return (
-    <div className="bg-white">
-      <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:py-24 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900">All-in-one platform</h2>
-          <p className="mt-4 text-lg text-gray-500">
-            Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.
-          </p>
+    <div className="bg-gray-50">
+      <div className="px-4 py-12 mx-auto max-w-7xl sm:py-16 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+          <h2 className="text-3xl font-extrabold text-center text-gray-900 sm:text-4xl">Frequently asked questions</h2>
+          <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+            {faqs.map((faq) => (
+              <Disclosure as="div" key={faq.question} className="pt-6">
+                {({ open }) => (
+                  <>
+                    <dt className="text-lg">
+                      <Disclosure.Button className="flex items-start justify-between w-full text-left text-gray-400">
+                        <span className="font-medium text-gray-900">{faq.question}</span>
+                        <span className="flex items-center ml-6 h-7">
+                          <ChevronDownIcon
+                            className={classNames(open ? '-rotate-180' : 'rotate-0', 'h-6 w-6 transform')}
+                            aria-hidden="true"
+                          />
+                        </span>
+                      </Disclosure.Button>
+                    </dt>
+                    <Disclosure.Panel as="dd" className="pr-12 mt-2">
+                      <p className="text-base text-gray-500">{faq.answer}</p>
+                    </Disclosure.Panel>
+                  </>
+                )}
+              </Disclosure>
+            ))}
+          </dl>
         </div>
-        <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-4 lg:gap-x-8">
-          {features.map((feature) => (
-            <div key={feature.name} className="relative">
-              <dt>
-                <CheckIcon className="absolute w-6 h-6 text-green-500" aria-hidden="true" />
-                <p className="text-lg font-medium leading-6 text-gray-900 ml-9">{feature.name}</p>
-              </dt>
-              <dd className="mt-2 text-base text-gray-500 ml-9">{feature.description}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </div>
   )

@@ -5,6 +5,7 @@ import App from "./App";
 import Team from "./pages/Team";
 import Projects from "./pages/Projects";
 import Calendar from "./pages/Calendar";
+import Portfolio from "./pages/Portfolio";
 import Footer from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,6 +17,7 @@ root.render(
       <Route path="Team/" element={<Team />} />
       <Route path="Projects/" element={<Projects />} />
       <Route path="Calendar/" element={<Calendar />} />
+      <Route path="Portfolio/" element={<Portfolio />} />
     </Routes>
     <Footer />
   </BrowserRouter>
