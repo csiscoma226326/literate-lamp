@@ -36,7 +36,7 @@ const posts = [
       },
     },
     {
-      title: 'Reaction',
+      title: 'Literate Lamp',
       href: '#',
       category: { name: 'React + TailwindCSS', href: '#' },
       description:
